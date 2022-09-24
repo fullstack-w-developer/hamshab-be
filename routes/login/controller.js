@@ -44,7 +44,7 @@ export default new (class extends controller {
           "email",
           "timeline",
           "profile",
-          "imageBackground",
+          "backgroundImage",
           "bio",
           "music",
           "isAdmin"
