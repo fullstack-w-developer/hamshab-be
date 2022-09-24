@@ -1,0 +1,58 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\EasyNet\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-11.0.15_10\bin;C:\Program Files\nodejs\;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\Users\EasyNet\AppData\Local\Microsoft\WindowsApps;C:\Users\EasyNet\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\EasyNet\AppData\Local\GitHubDesktop\bin;C:\Users\EasyNet\AppData\Local\Android\Sdk\platform-tools;C:\Users\EasyNet\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\EasyNet\Desktop\project\projectThesis\backend\package.json: Unexpected token } in JSON at position 189
+      at JSON.parse (<anonymous>)
+      at C:\Users\EasyNet\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\EasyNet\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\EasyNet\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "chat",
+    "version": "1.0.0",
+    "description": "this id chat online mern project",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+      "start": "nodemon server.js",
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "auto-bind": "^4.0.0",
+      "bcrypt": "^5.0.1",
+      "body-parser": "^1.19.2",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.3",
+      "express-validator": "^6.14.0",
+      "jsonwebtoken": "^8.5.1",
+      "lodash": "^4.17.21",
+      "mongoose": "^6.2.9",
+      "morgan": "^1.10.0",
+      "multer": "^1.4.4",
+      "node-base64-image": "^2.0.4",
+      "socket.io": "^4.4.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
