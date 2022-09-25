@@ -36,25 +36,27 @@ export default new (class extends controller {
         console.log(err);
       }
 
-      const { username, email, bio, timeline } = req.body;
+      if (req.files?.music) {
+        req.files.music =
+          AdressServer + req.files.music[0].filename;
+      }
+
+      if (req.files?.backgroundImage) {
+        req.files.backgroundImage =
+          AdressServer +
+          req.files.backgroundImage[0].filename;
+      }
+      if (req.files?.profile) {
+        req.files.profile =
+          AdressServer + req.files.profile[0].filename;
+      }
 
       const user = await this.user.findByIdAndUpdate(
         { _id: req.user._id },
-        {
-          $push: {
-            timeline: { $each: timeline },
-          },
-          username,
-          email,
-          bio,
-          music: AdressServer + req.files.music[0].filename,
-          profile:
-            AdressServer + req.files.profile[0].filename,
-          backgroundImage:
-            AdressServer +
-            req.files.backgroundImage[0].filename,
-        }
+        { ...req.body, ...req.files },
+        { new: true }
       );
+
       return this.response({
         res,
         data: {
@@ -66,7 +68,7 @@ export default new (class extends controller {
             "music",
             "profile",
             "backgroundImage",
-            "timeline"
+            "timeline",
           ]),
         },
         message: "successful",
